@@ -28,7 +28,7 @@ namespace Persistence.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Language>().ToTable(a =>
+            modelBuilder.Entity<Language>(a =>
             {
                 a.ToTable("Languages").HasKey(k => k.Id);
                 a.Property(p => p.Id).HasColumnName("Id");
